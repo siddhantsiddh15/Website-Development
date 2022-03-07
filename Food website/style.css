@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500&family=Nunito:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap');
+
+/* common styles */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+}
+
+.section-heading{
+    
+    font-size: 9vw;
+    font-weight: 300;
+    color:#fff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.3rem 0.3rem 0.3rem #000;
+    transition: text-shadow 0.3s ease-in;
+    margin: 20px;
+}
+
+
+.section-heading:hover{
+    
+    font-size: 9vw;
+    font-weight: 300;
+    color:#fff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0  2rem rgb(255, 0, 0);
+    cursor: pointer;
+    margin: 20px;
+}
+/* End of common styles */
+
+html{
+    font-size: 62.5%;
+}
+
+/* section-1 */
+.section-1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;   
+}
+
+
+.section-1 .section-heading{
+    transform: translateX(-10%);
+}
+
+.section-1-icons i{
+    position: absolute;
+    font-size: 15rem;
+    color: slateblue;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    text-shadow: 3px 3px 10px  rgba(0,0,0,0.79);
+    transition: all 1.5s linear;
+    margin-right: 15rem;
+    padding-right: 15rem;
+}
+
+.section-1-icons .change{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+
+
+/* End of section-1 */
+
+/* section-2 */
+.section-2{
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 0;
+
+}
+
+.cards-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+
+.card{
+    width: 30rem;
+    background: linear-gradient(10deg, rgba(255,255,255,1) 8%, rgba(244,255,0,1) 66%);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 2.5px 0px rgba(0,0,0,0.5);
+    transition: all 0.2s linear;
+
+}
+
+.card:hover{
+    width: 30rem;
+    background: linear-gradient(10deg, rgba(255,255,255,1) 8%, rgba(244,255,0,1) 66%);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px 0px rgb(245, 255, 50, 0.1);
+    transform: scale(1.02) translate(1%,1%);
+    transition: all 0.2s linear;
+    
+}
+
+.card-img{
+    width: 100%;
+}
+
+.card-name{
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 12px;
+    background: transparent;
+    border-radius: 10%;
+    width: 10rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    color: #111;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.7);
+    transition: all 0.1s linear;
+}
+
+.card-name:hover{
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    background: transparent;
+    padding: 12px;
+    border-radius: 10%;
+    width: 10rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    color: #111;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.7);
+    transform: scale(1.1);
+}
+
+
+.card-btn{
+    width: 60%;
+    border-radius: 10%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    margin-top: 1rem;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.1s linear;
+    border: none;
+}
+
+.card-btn:hover{
+    width: 60%;
+    border-radius: 10%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    margin-top: 1rem;
+    background-color: rgb(153, 153, 153);
+    color: rgb(0, 0, 0);
+    transform: scale(0.95);
+    letter-spacing: 0.1rem;
+    border: none;
+}
