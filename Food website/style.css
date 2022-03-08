@@ -50,21 +50,19 @@ html{
     height: 100vh;
     background-color: #333;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;   
 }
 
 
-.section-1 .section-heading{
-    transform: translateX(-10%);
-}
+
 
 .section-1-icons i{
     position: absolute;
     font-size: 15rem;
     color: slateblue;
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-25%, -50%) scale(0.9);
     opacity: 0;
     text-shadow: 3px 3px 10px  rgba(0,0,0,0.79);
     transition: all 1.5s linear;
@@ -73,7 +71,7 @@ html{
 }
 
 .section-1-icons .change{
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-25%, -50%) scale(1);
     opacity: 1;
 }
 
@@ -83,7 +81,7 @@ html{
 
 /* section-2 */
 .section-2{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: max-content;
     background-color: #222;
@@ -101,7 +99,8 @@ html{
 }
 
 .card{
-    width: 30rem;
+    position: relative;
+    width: 25vw;
     background: linear-gradient(10deg, rgba(255,255,255,1) 8%, rgba(244,255,0,1) 66%);
     padding: 3rem;
     display: flex;
@@ -115,7 +114,7 @@ html{
 }
 
 .card:hover{
-    width: 30rem;
+    width: 25vw;
     background: linear-gradient(10deg, rgba(255,255,255,1) 8%, rgba(244,255,0,1) 66%);
     padding: 3rem;
     display: flex;
@@ -188,3 +187,209 @@ html{
     letter-spacing: 0.1rem;
     border: none;
 }
+
+/* Section-2 ends */
+
+/* section-3  */
+.section-3{
+    background-color: #333;
+    padding : 5rem ;
+    height: max-content;
+    width: 100%;
+    position: relative;
+}
+
+.food-img{
+    width: 24vw;
+    height: 15vw;
+    object-fit: cover;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+.gallery-link:hover .food-img{
+    opacity: 0.2;
+    
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+.gallery-link{
+    position:relative ;
+    margin-bottom: 4rem;
+    transition: all 0.3s linear;
+    overflow: hidden;
+    box-shadow: 3px 2px 2.5px 0px rgba(110,110,110,0.58);
+}
+
+.gallery-link:hover{
+    background: linear-gradient(356deg, rgba(255,255,255,0.9) 0%, rgba(170,170,170,0.9) 100%);
+}
+
+
+.gallery-link::before{
+    content: '';
+    position: absolute;
+    width: 0.2rem;
+    height: 80%;
+    background-color: white;
+    top: 2vw;
+    left: 80%;
+    transform: translateY(150%);
+    transition: all 0.3s linear;
+}
+
+
+
+.gallery-link::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 0.1rem;
+    background-color: white;
+    top: 30%;
+    left: 2vw;
+    transform: translateX(150%);
+    transition: all 0.3s linear;
+}
+
+.gallery-link:hover::before{
+    transform: translateY(0%);
+}
+
+.gallery-link:hover::after{
+    transform: translateX(0%);
+}
+
+.food-name{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.2rem;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+
+
+.gallery-link:hover .food-name{
+    opacity: 1;  
+}
+
+
+.food-description{
+    position: absolute;
+    bottom: 3vw;
+    left: 2rem;
+    width: 70%;
+    font-size: 1.2vw;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(500%);
+    transition: all 0.3s linear;
+    color: black;
+}
+
+.gallery-link:hover .food-description{
+    opacity: 1;
+    transform: translateY(00%);
+}
+
+/* End of section -3  */
+
+/* section-4 */
+
+.section-4{
+    width: 100%;
+    height: 30vh;
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 2rem;
+    font-size:1rem;
+    color: rgb(200, 200, 200);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.4);
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+.section-4-text{
+    text-transform: capitalize;
+
+}
+
+.section-4-heading{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #a79a2b;
+    margin-bottom: 1rem;
+}
+
+.section-4-paragraph{
+    font-size: 1.2rem;
+    color: rgb(200, 200, 200);
+}  
+
+.signup-form{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 20rem;
+    height: 2rem;
+    padding: 1rem;
+    border: 0.2rem solid #a79a2d;
+    font-size:  1rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #a79a2d;
+}
+
+.signup-form-input::placeholder{
+    color: #a79a2d;
+}
+
+.signup-form-btn{
+    position: relative;
+    left: -2.3rem;
+    width: 2rem;
+    height: 2rem;
+    color: #a79a2d;
+    background-color: #333;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    
+
+}
+
+
+/* End of section-4  */
+
