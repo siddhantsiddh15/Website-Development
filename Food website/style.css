@@ -39,8 +39,83 @@
 }
 /* End of common styles */
 
+/* Navbar */
+
+.navbar{
+    position: fixed;
+    background-color: #000;
+    z-index: 1;
+    width: 100%;
+    height: 15vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    transform: translateY(-70%);
+    transition: transform 0.2s linear;
+}
+
+.navbar::before{
+    content: '';
+    width: 4rem;
+    height: 80%;
+    left: 1rem;
+    background-color: rgb(0, 0, 0);
+    top: -20%;
+    position: fixed;
+    transform: translateY(100%);
+    z-index: 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+ .navbar:hover{ 
+    transform: translateY(0%);
+}
+
+.navbar-link{
+    color: #aaa;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(0.5rem);
+    transition: all 0.2s linear;
+}
+
+.navbar:hover .navbar-link{
+    transform: translateY(-0.5rem);
+}
+
+.navbar-link i{
+    font-size: 3rem;
+    transition: all 0.2s linear;
+}
+
+.navbar-link span{
+    font-size: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s linear;
+}
+
+.navbar-link:hover i{
+    text-shadow: 0px 0px 8px rgba(206,89,55,0.97);
+    transform: translate(-0.5%, -0.5%);
+}
+
+.navbar-link:hover span{
+    transform: scale(1.05);
+    
+}
+/* End of Navbar */
+
+
 html{
-    font-size: 62.5%;
+    font-size: 62%;
 }
 
 /* section-1 */
@@ -124,7 +199,7 @@ html{
     border-radius: 20px;
     box-shadow: 8px 8px 8px 0px rgb(245, 255, 50, 0.1);
     transform: scale(1.02) translate(1%,1%);
-    transition: all 0.2s linear;
+   
     
 }
 
@@ -164,8 +239,8 @@ html{
 
 
 .card-btn{
-    width: 60%;
-    border-radius: 10%;
+    width: 10rem;
+    border-radius: 1rem;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     margin-top: 1rem;
@@ -173,14 +248,16 @@ html{
     color: #fff;
     transition: all 0.1s linear;
     border: none;
+    
 }
 
 .card-btn:hover{
-    width: 60%;
-    border-radius: 10%;
-    padding-top: 0.6rem;
+    width: 10rem;
+    border-radius: 1rem;
+    padding-top: 0.8rem;
     padding-bottom: 0.6rem;
     margin-top: 1rem;
+    font-weight: 900;
     background-color: rgb(153, 153, 153);
     color: rgb(0, 0, 0);
     transform: scale(0.95);
@@ -272,8 +349,8 @@ html{
 
 .food-name{
     position: absolute;
-    top: 3rem;
-    left: 3rem;
+    top: 10%;
+    left: 10%;
     font-size: 2rem;
     font-weight: 700;
     text-transform: capitalize;
@@ -293,8 +370,8 @@ html{
 
 .food-description{
     position: absolute;
-    bottom: 3vw;
-    left: 2rem;
+    top: 35%;
+    left: 10%;
     width: 70%;
     font-size: 1.2vw;
     font-weight: 300;
@@ -393,3 +470,102 @@ input{
 
 /* End of section-4  */
 
+/* media query */
+
+@media(max-width:528px){
+    html{
+        font-size: 40%;
+    }
+    .section-2{
+        height: auto;
+        padding: 10rem 0 12rem 0;
+    }
+
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .gallery-link{
+        width: 40rem;
+        height: 25rem;
+        margin: 3rem;
+        border-bottom-left-radius: 3px ;
+        border-top-left-radius: 3px;
+        border-bottom-right-radius:3px ;
+        border-top-right-radius: 3px;
+        box-shadow: 1.5px 1px 0.5px 0px rgba(110,110,110,0.58);
+    }
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .card{
+        margin-top: 4rem;
+        width: 60%;
+
+    }
+
+    .card:hover{
+        margin-top: 4rem;
+        width: 60%;
+
+    }
+
+    .food-img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-name{
+        font-size: 3rem;
+    }
+
+    .card-name:hover{
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+    }
+    .card-btn{
+        width: 60%;
+        font-size: 3rem;
+        padding: 2rem;
+    }
+
+    .card-btn:hover{
+        width: 60%;
+        font-size: 3rem;
+        padding: 2rem;
+        margin: none;
+        letter-spacing: 0;
+        transform: scale(1);
+    }
+
+    .navbar{
+        transform: translate(0, -10%);
+    }
+
+    .navbar::before{
+        content: '';
+        opacity: 0;
+    }
+
+    .gallery-link:hover .food-name{
+        top: 4rem;
+        
+    }
+    
+
+    .gallery-link:hover .food-description{
+        font-size: 2rem;
+        top: 10rem;
+    }
+
+    
+}
+
+/* end of media query */
