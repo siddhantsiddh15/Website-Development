@@ -1,0 +1,715 @@
+/* Common Styles  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Karla', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.section-heading{
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color:#ddd;
+    margin-right: 4rem;
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    
+}
+
+.section-heading-line{
+    width: 2rem;
+    height: 0.1rem;
+    background-color: #ddd;
+    position: absolute;
+    left:4rem; 
+    top:13.5rem;
+    opacity: 0;
+    animation: move 5s forwards 2s;
+}
+/* End of Common Styles  */
+
+/* Navbar */
+.navbar{
+    width:100%;
+    height: 5rem;
+    position: fixed;
+    top:-6rem;
+    z-index: 1;
+    background: #000;
+    padding: 0.75rem;
+    opacity: 0.95;
+    transition: height 0.2s ease-out;
+    animation: animatenavbar 1s 0.5s forwards;
+}
+
+@keyframes animatenavbar{
+    0%{
+        top: -8rem;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.navbar.change{
+    height: 80vh;
+
+}
+
+.logo{
+    position: absolute;
+    top: 0.75rem;
+    left:1.5rem;
+   
+}
+
+.logo a{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 0.2rem;
+    font-weight:bolder;
+
+}
+
+
+.logo span{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 3rem;
+    color:rgba(247, 0, 0, 1);
+    font-weight: 700;
+}  
+
+.nav-list{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease-in ;
+}
+
+.change .nav-list{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-link{
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 0.4rem;
+    font-size: 2rem;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: color 0.2s linear;
+}
+
+.nav-link:hover{
+    color: #9e0e09
+}
+/* End of Navbar */
+
+/* Menu */
+.menu{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;   
+    background-color: #000;
+    z-index: 2;
+    top: 1rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.line{
+    width: 100%;
+    height: 0.15rem;
+    background-color:#eee;
+    cursor: pointer;
+}
+
+.line-1{
+    width: 50%;
+    margin-right: auto;
+    transition: all 0.1s linear;
+}
+
+.line-2{
+    height: 0.175rem;
+    transition: all 0.1s linear;
+}
+
+.line-2.change{
+    height: 0.15rem;
+    transform: rotate(-180deg);
+}
+
+.line-1.change{
+    height: 0.2rem;
+    transform: translate(101%, 0.85rem) rotate(-35deg);
+    transform-origin: right;
+}
+.line-3{
+    width: 50%;
+    margin-left: auto;
+    transition: all 0.1s linear;
+}
+
+.line-3.change{
+    height: 0.2rem;
+    transform: translate(20%, -1.7rem) rotate(35deg);
+    transform-origin: left;
+}
+
+
+/* End of Menu */
+
+
+/* Section-1 */
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background: url('images/dark-bg.jpeg') no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.banner{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    overflow: hidden;
+   
+}
+.banner-heading span{
+    
+    font-family:'Oswald', sans-serif;
+    font-size: 8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0.3rem 0.3rem 0.6rem rgba(0,0,0,0.5);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    
+}
+
+.banner-paragraph{
+    margin-top: 15rem;
+    font-size:2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:#fff;
+    background-color: rgba(0,0,0,0.6);
+    margin-bottom: 1rem;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0;
+    box-shadow: 1rem 1rem 5rem rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeAnimation 1s 1.5s forwards;
+}
+
+@keyframes fadeAnimation{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.banner-btn{
+    width: 23rem;
+    height: 3.5rem;
+    font-family: 'Karla', sans-serif;
+    background: linear-gradient(-60deg, rgb(150, 3, 3) , rgb(226, 25, 25));
+
+    border-radius: 3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 0.2rem solid rgba(136, 2, 2, 0.2) ;
+    margin-top: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.2rem rgba(247, 0, 0, 0.5);
+    letter-spacing: 0.1rem;
+    box-shadow: 1rem 2rem 3rem rgba(0,0,0,0.5);
+    cursor: pointer;
+    animation: fadeAnimation 1s 2s forwards;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-btn::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right, transparent, #fff, transparent);
+    transform: skewX(-30deg);
+    top: 0;
+    left: -110%;
+    position: absolute;
+    transition: left 0.2s linear;
+}
+
+
+.banner-btn:hover::before{
+    left:100%
+}
+
+.heading-1{
+    animation: animateHeading 10s 2.5s infinite;
+}
+.heading-2{
+    animation: animateHeading 10s 5s infinite;
+}
+.heading-3{
+    animation: animateHeading 10s 7.5s infinite;
+}
+.heading-4{
+    animation: animateHeading 10s 10s infinite;
+}
+
+
+@keyframes animateHeading{
+    0%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+    3%{
+        transform:translateZ(0);
+        opacity: 1;
+        letter-spacing: 1.5rem;
+    }
+    25%{
+        transform:translateZ(0);
+        opacity: 1;
+        letter-spacing: 1.5rem;
+    }
+    28%{
+        transform:translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+    100%{
+        transform:translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+}
+
+/* End of Section-1 */
+
+/* Section -2  */
+
+.section-2{
+    width: 100%;
+    height: 105vh;
+    background-color: #222020;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    position: relative;
+}
+
+
+/* Line animation */
+@keyframes move{
+    0%{
+        width: 2rem;
+        left: 4rem;
+        opacity: 0.7;
+    }
+    50%{
+        width: 16rem;
+        left: 4rem;
+    }
+    80%{
+        width: 0;
+        left: 4rem;
+        opacity: 0.4;
+    }
+    90%{
+        width: 1rem;
+        left:20rem;
+        opacity: 0.4;
+    }
+    100%{
+        width: 2rem;
+        opacity: 0;
+    }
+    
+}
+/* End of Line animation */
+
+.video-wrapper{
+    width: 50rem;
+    height: 25rem;
+    position: absolute;
+    top: 16rem;
+    right: 6rem;
+    box-shadow: 3rem 3rem 3rem rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+
+
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    transition: opacity 0.3s linear;
+}
+
+.controls{
+    width: 100%;
+    position: absolute;
+    height: 2.5rem;
+    bottom: 0rem;
+    background-color: rgba(0,0,0,0.7);
+    transform: translateY(calc(100% - 0.2rem));
+    transition: transform 0.25s linear;
+}
+
+.video-wrapper:hover .controls{
+    transform: translateY(0);
+}
+.buttons{
+    padding: 0.5rem 0rem 0rem 0.5rem;
+
+}
+
+.video-bar-wrapper{
+    width: 100%;
+    height: 0.3rem;
+    background-color: #000;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.video-bar{
+    height: 100%;
+    width: 0%;
+    background-color: #d30819;
+    transition:  width 0.21s linear;
+}
+
+.buttons button{
+    background: none;
+    border: none;
+    cursor:pointer;
+}
+
+.buttons i{
+    color: #ddd;
+    font-size: 1.5rem;
+    padding-top: 0.2rem;
+}
+.section-2-paragraph{
+    width: 40rem;
+    position: absolute;
+    top : 16rem;
+    left: 4rem;
+    font-size: 1rem;
+    color: #ddd;
+    border-top: 0.2rem double #aaa;
+    border-bottom: 0.3rem double #aaa;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    text-shadow: 1rem 1rem 2rem rgba(0,0,0,0.7);
+    line-height: 2;
+}
+
+.fa-quote-left{
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.fa-quote-right{
+    align-self: flex-end;
+    font-size: 1.5rem;
+}
+/* End of Section 2 */
+
+/* Section-3 */
+.section-3{
+    width:100%;
+    height: 100vh;
+    position: relative;
+    background-color: #03070e;
+    display: flex;
+    align-items: center;
+    padding-left: 10rem;
+}
+
+
+.pricing-cards-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 16rem;
+    left:0
+
+}
+
+.pricing-card{
+    width: 20rem!important;
+    height: 28rem!important;
+    background-color: #181b1d;
+    border-radius: 1rem;
+    box-shadow:  2rem 2rem 6rem rgba(0,0,0,0.7);
+    /* rotateY for the seeing the backside of the card element */
+    /* transform: rotateY(180deg);  */
+}
+
+.pricing-card-front{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pricing-card-heading{
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+    width: 100%;
+    height: 3.4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1.3rem;
+}
+
+
+.heading-free{
+    background: linear-gradient(to right, #087285, #0da5d3);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.heading-basic{
+    background: linear-gradient(to right, #946809, #bdba0e);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.heading-standard{
+    background: linear-gradient(to right, #a10c14, #e23b3b);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.heading-premium{
+    background: linear-gradient(to right, #0b7e48, #3be286);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.pricing-card-price{
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    color: rgb(255, 230, 0);
+}
+
+.pricing-card-list li{
+    /* putting space  between list items */
+    margin-bottom: 0.5rem;
+}
+
+.list-free li{
+    color: #0da5d3;
+}
+
+.list-basic li{
+    color: #bdba0d;
+}
+
+.list-standard li{
+    color: #e23b3b;
+}
+
+.list-premium li{
+    color: #3be286;
+}
+
+.pricing-card-list span{
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+
+}
+
+.pricing-card-list i{
+    font-size: 1.2rem;
+    width: 3rem;
+}
+
+.pricing-card-btn{
+    /* styling the price button */
+    width: 11rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1.1rem;
+    background-color: white;
+    text-transform: uppercase;
+    
+
+}
+
+.btn-free{
+   color: #0da5d3;
+   position: relative;
+   overflow: hidden;
+}
+
+.btn-basic{
+    color: #bdba0d;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-standard{
+    color: #e23b3b;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium{
+    color: #3be286;
+    position: relative;
+    overflow: hidden;
+}
+
+/* btn effect card section-3 */
+.btn-free::before{
+    width: 50%;
+    content: '';
+    height: 5rem;
+    background:linear-gradient(to right, #0da5d3, transparent);
+    transform: translateY(-30%) skew(20deg);
+    z-index: 1;
+    position: absolute;
+    left: -110%;
+    transition: left 0.3s linear;
+}
+
+.btn-free:hover::before{
+    left: 110%;
+}
+
+
+
+.btn-basic::before{
+    width: 50%;
+    content: '';
+    height: 5rem;
+    background:linear-gradient(to right, #bdba0d, transparent);
+    transform: translateY(-30%) skew(20deg);
+    z-index: 1;
+    position: absolute;
+    left: -110%;
+    transition: left 0.3s linear;
+}
+
+.btn-basic:hover::before{
+    left: 110%;
+}
+
+
+
+.btn-standard::before{
+    width: 50%;
+    content: '';
+    height: 5rem;
+    background:linear-gradient(to right, #e23b3b, transparent);
+    transform: translateY(-30%) skew(20deg);
+    z-index: 1;
+    position: absolute;
+    left: -110%;
+    transition: left 0.3s linear;
+}
+
+.btn-standard:hover::before{
+    left: 110%;
+}
+
+
+
+.btn-premium::before{
+    width: 50%;
+    content: '';
+    height: 5rem;
+    background:linear-gradient(to right, #3be286, transparent);
+    transform: translateY(-30%) skew(20deg);
+    z-index: 1;
+    position: absolute;
+    left: -110%;
+    transition: left 0.3s linear;
+}
+
+.btn-premium:hover::before{
+    left: 110%;
+}
+/* End of btn effect card section-3 */
+
+/* Swiper class */
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide .pricing-card {
+    display: block;
+    width: 80%;
+    height: 100%;
+    margin: 2rem;
+  }
+/* End of Swiper class */
+
+/* End of Section-3 */
