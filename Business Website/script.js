@@ -62,18 +62,19 @@ video.addEventListener('timeupdate', ()=>{
 
 
 // End of Section-2 video
+// Section 3 cards
+const cards = document.querySelectorAll('.pricing-card')
 
-// Swiper class Section-3
+cards.forEach( card => {
+    card.addEventListener('click', () => {
+        removeActiveClasses();
+        card.classList.add('active')
+    })
+})
 
-const swiper = new Swiper('.swiper', {
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 30,
-      slideShadows: false,
-    },
-  });
-
-
-
-
-// End of Swiper class Section-3
+function removeActiveClasses(){
+    cards.forEach( card => {
+        card.classList.remove('active')
+    })
+}
+// End of section3 cards

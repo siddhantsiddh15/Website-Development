@@ -15,14 +15,16 @@
     <!-- Swiper CSS link -->
     <link
     rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
   />
+
+
     <!-- End of Swiper CSS link -->
     
 </head>
 <body>
 
-    <!-- Navabar -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
             <a href="" class="">
@@ -49,7 +51,7 @@
     
     <div class="container">
         <!-- section-1  -->
-        <section class="section-1">
+        <section class="section-1" id="home">
 
             <div class="banner">
                 <h1 class="banner-heading">
@@ -66,7 +68,7 @@
         <!-- End of section-1  -->
 
         <!-- Section 2 -->
-        <section class="section-2">
+        <section class="section-2" id="about">
             <h1 class="section-heading">About us</h1>
 
             <div class="section-heading-line">
@@ -104,16 +106,16 @@
         <!-- End of section 2 -->
 
         <!-- Section -3 -->
-        <section class="section-3">
+        <section class="section-3" id="pricing">
             <h1 class="section-heading">Pricing</h1>
             <div class="section-heading-line"></div>
 
-                <!-- Swiper Wrapper  -->
-                <!-- Cards wrapper -->
-            <div class="pricing-cards-wrapper swiper-wrapper">
+             
+                <!-- Cards wrapper --> 
+            <div class="pricing-cards-wrapper ">
             <!-- Card-1 -->
 
-                <div class="pricing-card swiper-slide">
+                <div class="pricing-card ">
                     <div class="pricing-card-front">
                         <h1 class="pricing-card-heading heading-free">FREE</h1>
                         <h3 class="pricing-card-price">$0</h3>
@@ -146,7 +148,7 @@
             
             <!-- End of card 1 -->
             <!-- Card 2  -->
-                <div class="pricing-card swiper-slide">
+                <div class="pricing-card ">
                     <div class="pricing-card-front">
                         <h1 class="pricing-card-heading heading-basic">Basic</h1>
                         <h3 class="pricing-card-price">$299</h3>
@@ -180,7 +182,7 @@
             <!-- End of Card 2 -->
 
             <!-- Card -3 -->
-                <div class="pricing-card swiper-slide">
+                <div class="pricing-card active ">
                     <div class="pricing-card-front">
                         <h1 class="pricing-card-heading heading-standard">Standard</h1>
                         <h3 class="pricing-card-price">$699</h3>
@@ -216,7 +218,7 @@
 
             <!-- Card 4 -->
             
-                <div class="pricing-card swiper-slide">
+                <div class="pricing-card ">
                     <div class="pricing-card-front">
                         <h1 class="pricing-card-heading heading-premium">Premium</h1>
                         <h3 class="pricing-card-price">$999</h3>
@@ -252,17 +254,72 @@
                 </div>
             
             <!-- End of Card 4 -->
-            </div>
+                </div>
                 <!-- End of card wrapper -->
                 
-                <!-- End of Swiper wrapper -->
+             
         </section>
         <!-- End of Section-3 -->
+
+        <!-- Section -4 -->
+        <section class="section-4" id="contact">
+            <h1 class="section-heading">Contact</h1>
+            <div class="section-heading-line"></div>
+            
+
+            <div class="contact-wrapper">
+                <div class="contact-details">
+                    <div class="phone">
+                        <!-- We will have a phone icon here -->
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Phone</h3>
+                        <p>123456789</p>
+                        <p>987654321</p>
+                    </div>
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div> 
+
+                    <div class="email">
+                        <i class="far fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>support@email.com</p>
+                        <p>sales@gmail.com</p>
+                    </div>
+                </div>
+
+                <h1>Get in touch</h1>
+                <form  class="contact-form">
+                    <input type="text" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message" >
+                </form>
+            </div>
+        </section>
+        <!-- End of Section -4 -->
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-nav">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+                
+            </div>
+                <p class="copyright">
+                    Copyright &copy; Siddhant codes All Rights Reserved
+                </p>
+
+        </footer>
+        <!-- End of Footer -->
     </div>
     
-    
+
     <script src="script.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
     
 </body>
 </html>
